@@ -42,6 +42,7 @@ button {
 
 .button3 {
   /*Style me! You can test out changing the font, or font size, ...*/
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .button4 {
