@@ -31,6 +31,18 @@
   */
 }
 
+.crocodile {
+  text-align: left;
+}
+
+.giraffe {
+  text-align: center;
+}
+
+.dino {
+  text-align: right;
+}
+
 /*
   The giraffe is afraid of the crocodile and the dino.
    - center the giraffe in the park
