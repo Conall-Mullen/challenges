@@ -61,10 +61,17 @@ li {
 .location {
   font-size: 10px;
   font-weight: 600;
-  text-align: left;
+  text-align: end;
   margin: 0;
 }
 
+ul .user .bio {
+  display: none;
+}
+
+ul .user .location {
+  text-align: left;
+}
 /*
   Part 1
 
