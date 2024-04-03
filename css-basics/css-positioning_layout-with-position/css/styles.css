@@ -66,6 +66,7 @@ body {
 .card__heading {
   margin: 0 0 10px 0;
   position: absolute;
+  top: 10px;
 }
 
 /**
