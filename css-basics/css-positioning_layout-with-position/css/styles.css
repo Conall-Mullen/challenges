@@ -41,9 +41,12 @@ body {
  * document is scrolled.
  */
 .footer {
+  position: fixed;
+  bottom: 0;
   background: #7fd9e2;
   color: #ffffff;
   height: 48px;
+  width: 100%;
 }
 
 /**
