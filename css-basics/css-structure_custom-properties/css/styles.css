@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-black-light: rgb(48 48 48 / 100%);
+  --color-primary: rgb(130 54 255);
+  --color-white: rgb(255 255 255);
+}
 body {
   margin: 0;
   font-family: system-ui;
