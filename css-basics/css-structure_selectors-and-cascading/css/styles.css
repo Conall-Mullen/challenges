@@ -70,14 +70,14 @@ a[href="https://developer.mozilla.org/de/"]
 }
 
 /* 4. These styles should apply to all links in the main navigation */
-nav a[href="#"] {
+nav a {
   outline: 2px dashed red;
   color: #ffffff;
   text-decoration: none;
 }
 
 /* 5. These styles should apply to the main navigation link corresponding to the current page */
-a[href="#"].current {
+nav .current {
   outline: 2px dashed red;
   color: #22e781;
 }
