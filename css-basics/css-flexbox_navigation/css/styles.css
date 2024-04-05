@@ -41,7 +41,7 @@ ul {
 .navigation__link {
   background-color: var(--primary-dark);
   color: var(--white);
-  padding: 5px 14px;
+  padding: 1em 2em;
   border-radius: 5px;
 }
 
@@ -49,4 +49,5 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  row-gap: 1em;
 }
