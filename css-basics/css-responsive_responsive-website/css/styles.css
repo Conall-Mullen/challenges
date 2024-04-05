@@ -242,10 +242,13 @@ fairly essential to completing this challenge. */
 CSS when certain conditions that we declare are met - such as a certain viewport 
 width, etc. */
 
-/* Media Query Tablet */
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
+@media (max-width: 375px) {
+  :root {
+    --header-brand: 3rem;
+    --header-brand-line-height: 4rem;
+    --header-text: 1.25rem;
+  }
+}
 
 /* Media Query Desktop */
 /* --- */
