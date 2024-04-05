@@ -17,19 +17,15 @@ body {
  * document is scrolled.
  */
 .header {
-  position: fixed;
-  z-index: 1;
-  top: 0px;
-  background: #8236ff;
+  background: #8236FF;
   color: #ffffff;
   height: 80px;
-  width: 100%;
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
   padding: 10px;
 }
 
 .header__text {
-  color: #ffdee2;
+  color: #FFDEE2;
 }
 
 .header__heading {
@@ -42,12 +38,9 @@ body {
  * document is scrolled.
  */
 .footer {
-  position: fixed;
-  bottom: 0;
-  background: #7fd9e2;
+  background:  #7fD9E2;
   color: #ffffff;
   height: 48px;
-  width: 100%;
 }
 
 /**
@@ -56,31 +49,25 @@ body {
  */
 .card {
   margin: 20px 10%;
-  border: 5px solid #8236ff;
+  border: 5px solid #8236FF;
   padding: 3% 10%;
   scroll-margin-top: 100px;
   border-radius: 2rem;
-  position: relative;
 }
 
 .card__heading {
   margin: 0 0 10px 0;
-  position: absolute;
-  top: 10px;
 }
 
 /**
  * Place the bookmark in the top, right corner of each card.
  */
 .card__bookmark {
-  border: 2px solid #8236ff;
+  border: 2px solid #8236FF;
   font-size: 2em;
   padding: 6px 12px;
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
 }
 
 /**
@@ -88,14 +75,11 @@ body {
  * unaffected when the document is scrolled.
  */
 .goto-top {
-  position: fixed;
-  bottom: 60px;
-  left: 10px;
   width: 48px;
   height: 48px;
   padding: 8px;
   border-radius: 50%;
-  background: #8236ff;
+  background: #8236FF;
   color: white;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
   text-decoration: none;
