@@ -37,6 +37,8 @@ body {
 
 .image-board__image--2 {
   /* Add styles here */
+  grid-column: 2 /3;
+  grid-row: 1 / 3;
 }
 
 .image-board__image--3 {
@@ -45,6 +47,7 @@ body {
 
 .image-board__image--4 {
   /* Add styles here */
+  grid-row: 2 / 4;
 }
 
 .image-board__image--5 {
@@ -53,4 +56,6 @@ body {
 
 .image-board__image--6 {
   /* Add styles here */
+  grid-column: 3 / 4;
+  grid-row: 2 / 4;
 }
