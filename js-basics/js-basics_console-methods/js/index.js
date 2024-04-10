@@ -26,4 +26,5 @@ let error = "This is an error!";
 
 console.log(coding);
 console.log(hacking);
+console.clear();
 console.error(error);
