@@ -2,35 +2,35 @@ let data = NaN;
 
 switch (typeof data) {
   case "undefined":
-    console.log("undefined");
+    console.log("Undefined");
     break;
   case "object":
     if (Array.isArray(data)) {
-      console.log("array");
+      console.log("Array");
     } else if (Object.is(data, null)) {
-      console.log("null");
+      console.log("Null");
     } else {
-      console.log("object");
+      console.log("Object");
     }
     break;
   case "number":
     if (Number.isNaN(data)) {
-      console.log("NaN");
+      console.log("Not a number");
     } else {
       console.log("Number");
     }
     break;
   case "string":
-    console.log(typeof data);
+    console.log("String");
     break;
   case "boolean":
-    console.log(typeof data);
+    console.log("Boolean");
     break;
   case "bigint":
-    console.log(typeof data);
+    console.log("Big Int");
     break;
   case "function":
-    console.log(typeof data);
+    console.log("Function");
     break;
 
   default:
