@@ -5,11 +5,14 @@ console.clear();
 
 const exampleArray = [true];
 exampleArray.push(2, "string");
+console.log("Excercise 1: ", exampleArray);
 
 // EXERCISE 2
 // Nest an array inside array nestedArray. After that nestedArray should contain an array as an element.
 
 const nestedArray = ["example", 10, true];
+nestedArray.unshift([1, 2, 3]);
+console.log("Excercise 2: ", nestedArray);
 
 // EXERCISE 3
 // Change the value of firstNumber to equal the first value of the numbers array using bracket notation.
