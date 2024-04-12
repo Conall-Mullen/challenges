@@ -51,6 +51,8 @@ console.log("Excercise 7: ", fruitsWithPop);
 // Put "hamster" onto the start of unshiftedPets variable by using the array method unshift.
 
 const unshiftedPets = ["dog", "cat", "rabbit"];
+unshiftedPets.unshift("hamster");
+console.log("Excercise 8: ", unshiftedPets);
 
 // EXERCISE 9
 // Use the shift method to remove the first item from shiftedFruits.
