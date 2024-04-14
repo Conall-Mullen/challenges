@@ -27,11 +27,26 @@ pizzaInput2.addEventListener("input", () => {
 function calculatePizzaGain(diameter1, diameter2) {
   let Pi = Math.PI;
   let area1 = 2 * Pi * (diameter1 / 2);
-  console.log("Area 1: ", area1);
+  //console.log("Area 1: ", area1);
   let area2 = 2 * Pi * (diameter2 / 2);
-  console.log("Area 2: ", area2);
-  let precentageIncrease = ((area2 - area1) / area1) * 100;
-  console.log(precentageIncrease);
+  //console.log("Area 2: ", area2);
+  let precentageIncrease = Math.round(((area2 - area1) / area1) * 100);
+  if (precentageIncrease > 0) {
+    console.log(
+      "Pizza 2 is",
+      precentageIncrease,
+      "percent larger than pizza 1"
+    );
+  } else if (precentageIncrease < 0) {
+    console.log(
+      "Pizza 2 is",
+      Math.abs(precentageIncrease),
+      "percent smaller than pizza 1"
+    );
+  } else if (precentageIncrease === 0) {
+    console.log("Pizzas are the same size");
+  }
+  return precentageIncrease;
 }
 // Task 2
 // define the function updatePizzaDisplay here
