@@ -12,48 +12,45 @@ pizzaInput1.addEventListener("input", () => {
   // write your code here
   let pizzaSize1 = pizzaInput1.value;
   let pizzaSize2 = pizzaInput2.value;
-  let increaseInSize = calculatePizzaGain(pizzaSize1, pizzaSize2);
-  output.textContent = Math.round(increaseInSize);
+  calculatePizzaGain(pizzaSize1, pizzaSize2);
+  updatePizzaDisplay(pizza1, pizzaSize1);
 });
 
 pizzaInput2.addEventListener("input", () => {
   // write your code here
   let pizzaSize1 = pizzaInput1.value;
   let pizzaSize2 = pizzaInput2.value;
-  let increaseInSize = calculatePizzaGain(pizzaSize1, pizzaSize2);
-  output.textContent = Math.round(increaseInSize);
+  calculatePizzaGain(pizzaSize1, pizzaSize2);
+  updatePizzaDisplay(pizza2, pizzaSize2);
 });
 
 // Task 1
 // define the function calculatePizzaGain here
 function calculatePizzaGain(diameter1, diameter2) {
   let Pi = Math.PI;
-  let area1 = 2 * Pi * (diameter1 / 2);
+  let area1 = Pi * Math.pow(diameter1 / 2, 2); //area formula is 2πr divide diameter by 2
   //console.log("Area 1: ", area1);
-  let area2 = 2 * Pi * (diameter2 / 2);
+  let area2 = Pi * Math.pow(diameter2 / 2, 2);
   //console.log("Area 2: ", area2);
-  let precentageIncrease = ((area2 - area1) / area1) * 100;
-  if (precentageIncrease > 0) {
+  let calculatedValue = ((area2 - area1) / area1) * 100;
+  if (calculatedValue > 0) {
+    console.log("Pizza 2 is", calculatedValue, "percent larger than pizza 1");
+  } else if (calculatedValue < 0) {
     console.log(
       "Pizza 2 is",
-      precentageIncrease,
-      "percent larger than pizza 1"
-    );
-  } else if (precentageIncrease < 0) {
-    console.log(
-      "Pizza 2 is",
-      Math.abs(precentageIncrease),
+      Math.abs(calculatedValue), //returns number as positive
       "percent smaller than pizza 1"
     );
-  } else if (precentageIncrease === 0) {
+  } else if (calculatedValue === 0) {
     console.log("Pizzas are the same size");
   }
-  return precentageIncrease;
+  output.textContent = Math.round(calculatedValue);
 }
 // Task 2
 // define the function updatePizzaDisplay here
 function updatePizzaDisplay(pizzaElement, newSize) {
-  pizzaElement.style.width = (newSize / 24) * 100 + "px";
+  let newDisplaySize = (newSize / 24) * 100 + "px";
+  pizzaElement.style.width = newDisplaySize;
 }
 // Task 3
 // define the function updateOutputColor here
