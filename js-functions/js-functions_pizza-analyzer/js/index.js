@@ -12,14 +12,16 @@ pizzaInput1.addEventListener("input", () => {
   // write your code here
   let pizzaSize1 = pizzaInput1.value;
   let pizzaSize2 = pizzaInput2.value;
-  calculatePizzaGain(pizzaSize1, pizzaSize2);
+  let increaseInSize = calculatePizzaGain(pizzaSize1, pizzaSize2);
+  output.textContent = Math.round(increaseInSize);
 });
 
 pizzaInput2.addEventListener("input", () => {
   // write your code here
   let pizzaSize1 = pizzaInput1.value;
   let pizzaSize2 = pizzaInput2.value;
-  calculatePizzaGain(pizzaSize1, pizzaSize2);
+  let increaseInSize = calculatePizzaGain(pizzaSize1, pizzaSize2);
+  output.textContent = Math.round(increaseInSize);
 });
 
 // Task 1
@@ -30,7 +32,7 @@ function calculatePizzaGain(diameter1, diameter2) {
   //console.log("Area 1: ", area1);
   let area2 = 2 * Pi * (diameter2 / 2);
   //console.log("Area 2: ", area2);
-  let precentageIncrease = Math.round(((area2 - area1) / area1) * 100);
+  let precentageIncrease = ((area2 - area1) / area1) * 100;
   if (precentageIncrease > 0) {
     console.log(
       "Pizza 2 is",
@@ -50,6 +52,8 @@ function calculatePizzaGain(diameter1, diameter2) {
 }
 // Task 2
 // define the function updatePizzaDisplay here
-
+function updatePizzaDisplay(pizzaElement, newSize) {
+  pizzaElement.style.width = (newSize / 24) * 100 + "px";
+}
 // Task 3
 // define the function updateOutputColor here
