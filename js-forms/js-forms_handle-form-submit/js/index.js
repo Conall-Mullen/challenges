@@ -12,16 +12,9 @@ const dateInput = document.getElementById("order-date");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  let complaintFile = {
-    firstName: firstNameInput.value,
-    lastName: lastNameInput.value,
-    age: ageInput.value,
-    email: emailInput.value,
-    complaint: complaintInput.value,
-    details: detailsInput.value,
-    rating: badnessInput.value,
-    date: dateInput.value,
-  };
-
-  console.log(complaintFile);
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData);
+  const agaBadnessSum = data.age + data.badness;
+  console.log(data);
+  console.log(`The age-badness-sum of ${data.firstName} is ${agaBadnessSum}`);
 });
