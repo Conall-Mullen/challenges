@@ -21,7 +21,7 @@ function logTry(cost) {
   return state;
 }
 
-export function launch(launchFunction) {
+export default function launch(launchFunction) {
   window.rocket = getNewRocket();
   try {
     launchFunction();

@@ -1,3 +1,5 @@
+import { loadPayload } from "./load";
+
 export const rocket = {
   id: "SpaceRocket",
   checksum: "a83cc046377cc58f8c0733a48b824f28c2c70b18",
