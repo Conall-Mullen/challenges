@@ -69,7 +69,13 @@ spinButton.addEventListener("click", async () => {
     let resultOfSpin = getMaxCount(
       await Promise.all([wheel1.spin(), wheel2.spin(), wheel3.spin()])
     );
-
+    if (resultOfSpin === 1) {
+      resultOfSpin = 0;
+    } else if (resultOfSpin === 2) {
+      resultOfSpin = 10;
+    } else {
+      resultOfSpin = 100;
+    }
     result.setResult(resultOfSpin);
     console.log(result);
   } catch (error) {
