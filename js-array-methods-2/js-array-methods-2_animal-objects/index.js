@@ -144,10 +144,9 @@ console.log(
 );
 
 // Hint: Filter for Europe first, then check every animal for its weight.
-const allAnimalsInEuropeWeighLessThanOnehundred = animals.filter((animal) => {
-  let euroAnimals = animal.continents.includes("Europe") && animal.weight < 100;
-  return euroAnimals;
-});
+const allAnimalsInEuropeWeighLessThanOnehundred = animals
+  .filter((animal) => animal.continents.includes("Europe"))
+  .filter((animal) => animal.weight < 100);
 console.log(
   "Lives in Europe and weighs less than 100?: ",
   allAnimalsInEuropeWeighLessThanOnehundred
