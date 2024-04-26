@@ -2,6 +2,7 @@ import { Wheel } from "./components/Wheel/Wheel.js";
 import { SpinButton } from "./components/SpinButton/SpinButton.js";
 import { Machine } from "./components/Machine/Machine.js";
 import { Result } from "./components/Result/Result.js";
+import { getMaxCount } from "./utils/symbols.js";
 
 console.clear();
 
@@ -62,6 +63,24 @@ spinButton.addEventListener("click", async () => {
    * and make sure it is always executed after the wheels have stopped,
    * even if an error was thrown.
    */
+
+  try {
+    result.setSpinning();
+    let resultOfSpin = getMaxCount(
+      await Promise.all([wheel1.spin(), wheel2.spin(), wheel3.spin()])
+    );
+    if (resultOfSpin === 1) {
+      resultOfSpin = 0;
+    } else if (resultOfSpin === 2) {
+      resultOfSpin = 10;
+    } else {
+      resultOfSpin = 100;
+    }
+    result.setResult(resultOfSpin);
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
 
   spinButton.disabled = false;
 });
