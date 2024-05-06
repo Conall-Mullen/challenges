@@ -1,5 +1,13 @@
 import "./App.css";
 
 export default function App() {
-  return <h1>Replace me with your component!</h1>;
+  return <Smiley isHappy={true} />;
+}
+
+function Smiley({ isHappy }) {
+  if (isHappy) {
+    return <p>😄</p>;
+  } else {
+    return <p>😔</p>;
+  }
 }
