@@ -1,5 +1,17 @@
 import "./App.css";
 
 export default function App() {
-  return <h1>Replace me with your component!</h1>;
+  return <Greeting name="Conall" isCoach={false} />;
+}
+
+function Greeting({ name, isCoach }) {
+  if (isCoach === true) {
+    return <h1>Hello Coach!{""}</h1>;
+  } else {
+    return (
+      <h1>
+        Hello {name}!{""}
+      </h1>
+    );
+  }
 }
