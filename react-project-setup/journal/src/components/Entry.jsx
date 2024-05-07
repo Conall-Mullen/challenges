@@ -1,5 +1,7 @@
+import { useState } from "react";
 import "./Entry.css";
 export default function Entry() {
+  let [isFavourite, setFavourite] = useState(false);
   return (
     <li>
       <h2 className="entry__title">Diary Entry</h2>
@@ -10,7 +12,21 @@ export default function Entry() {
         repellat quod provident ad vero! Deleniti soluta odio, totam ex voluptas
         sunt repellendus.
       </p>
-      <button className="entry__favourite-button">Favourite</button>
+      <button
+        className="entry__favourite-button"
+        onClick={() => setFavourite(!isFavourite)}
+      >
+        Favourite :{" "}
+        {isFavourite ? (
+          <span role="img" aria-label="Thumbs up">
+            👍
+          </span>
+        ) : (
+          <span role="img" aria-label="Thumbs down">
+            👎
+          </span>
+        )}
+      </button>
     </li>
   );
 }
