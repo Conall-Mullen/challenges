@@ -4,6 +4,7 @@
 }
 
 .entries {
+  width: 50vw;
   list-style-type: none;
   text-align: left;
   padding: 0;

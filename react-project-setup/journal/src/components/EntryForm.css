@@ -27,6 +27,7 @@
 .form__entry {
   margin: 1em;
   width: 100%;
+  resize: none;
 }
 .form__submit {
   margin: 1em;
