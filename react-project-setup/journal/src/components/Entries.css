@@ -1,0 +1,11 @@
+.nav {
+  display: flex;
+  align-items: flex-start;
+}
+
+.entries {
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+  margin: 1em;
+}
