@@ -1,7 +1,9 @@
+import { set } from "lodash";
 import "./App.css";
+import { useState } from "react";
 
 export default function App() {
-  let code = "?";
+  let [code, setCode] = useState("?");
 
   const validCode = "🐡🐠🐋";
 
@@ -11,6 +13,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
+            setCode("🐡");
             console.log("Update Code!");
           }}
         >
@@ -21,6 +24,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
+            setCode("🐋");
             console.log("Update Code!");
           }}
         >
@@ -31,6 +35,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
+            setCode("🐠");
             console.log("Update Code!");
           }}
         >
@@ -43,6 +48,7 @@ export default function App() {
       <button
         type="button"
         onClick={() => {
+          setCode("?");
           console.log("Reset Code!");
         }}
       >
