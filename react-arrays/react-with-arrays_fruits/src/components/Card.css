@@ -6,14 +6,22 @@
   background-color: var(--grey-light);
 }
 
-.card--green {
+.green {
   background-color: lightgreen;
 }
 
-.card--red {
+.red {
   background-color: lightcoral;
 }
 
-.card--yellow {
+.yellow {
   background-color: lightyellow;
+}
+
+.orange {
+  background-color: lightsalmon;
+}
+
+.purple {
+  background-color: lightpink;
 }
