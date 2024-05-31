@@ -1,5 +1,6 @@
-import { products } from "../../../lib/products";
+import dbConnect from "@/db/connect";
+import fish from "@/db/models";
 
-export default function handler(request, response) {
-  return response.status(200).json(products);
+export default async function handler(request, response) {
+  return await response.status(200).json(fish);
 }
