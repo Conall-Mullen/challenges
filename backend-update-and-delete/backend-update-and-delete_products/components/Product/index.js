@@ -3,13 +3,35 @@ import { useRouter } from "next/router";
 import { ProductCard } from "./Product.styled";
 import { StyledLink } from "../Link/Link.styled";
 import Comments from "../Comments";
+import { useState } from "react";
+import ProductForm from "../ProductForm";
 
 export default function Product() {
+  const [isEditMode, setIsEditMode] = useState(false);
   const router = useRouter();
   const { id } = router.query;
 
-  const { data, isLoading } = useSWR(`/api/products/${id}`);
+  const { data, isLoading, mutate } = useSWR(`/api/products/${id}`);
 
+  async function handleEditProduct(event) {
+    const formData = new FormData(event.target);
+    const productData = Object.fromEntries(formData);
+
+    const response = await fetch("/api/products", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(productData),
+    });
+    if (!response.ok) {
+      console.error(response.status);
+      return;
+    }
+
+    mutate();
+    event.target.reset();
+  }
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
@@ -20,6 +42,14 @@ export default function Product() {
 
   return (
     <ProductCard>
+      <button
+        type="button"
+        onClick={() => {
+          setIsEditMode(!isEditMode);
+        }}
+      >
+        ✏️
+      </button>
       <h2>{data.name}</h2>
       <p>Description: {data.description}</p>
       <p>
@@ -27,6 +57,13 @@ export default function Product() {
       </p>
       {data.reviews.length > 0 && <Comments reviews={data.reviews} />}
       <StyledLink href="/">Back to all</StyledLink>
+      {isEditMode && (
+        <ProductForm
+          onSubmit={handleEditProduct}
+          value={data.product}
+          isEditMode={true}
+        />
+      )}
     </ProductCard>
   );
 }
