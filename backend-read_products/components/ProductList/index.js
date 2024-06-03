@@ -15,14 +15,13 @@ export default function ProductList() {
 
   return (
     <>
-      {console.log("data", data)}
       <StyledHeading>Available Fishes</StyledHeading>
       <StyledList>
-        {/* {data.map((product) => (
+        {data.map((product) => (
           <li key={product._id}>
             <StyledLink href={`/${product._id}`}>{product.name}</StyledLink>
           </li>
-        ))} */}
+        ))}
       </StyledList>
     </>
   );
