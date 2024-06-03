@@ -24,6 +24,7 @@ export default function Product() {
       <p>
         Price: {data.price} {data.currency}
       </p>
+      {data.reviews ? console.log(data) : console.log("no reviews")}
       <StyledLink href="/">Back to all</StyledLink>
     </ProductCard>
   );
